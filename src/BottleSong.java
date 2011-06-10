@@ -1,10 +1,16 @@
 class BottleSong {
-	String liquidName;
-	String bottleFormPlural;
-	String bottleFormSing;
+	private String liquidName;
+	private String bottleFormPlural;
+	private String bottleFormSing;
 	String bottleBackup;
-	int liquidNum;
+	private int liquidNum;
 
+	public BottleSong (String liquidName, String bottleFormPlural, String bottleFormSing, int liquidNum){
+		this.liquidName = liquidName;
+		this.bottleFormPlural = bottleFormPlural;
+		this.bottleFormSing = bottleFormSing;
+		this.liquidNum = liquidNum;
+	}
 	// turned the phrase into a method for less coding
 	void countPhrase() {
 		System.out.println(liquidNum + " " + bottleFormPlural + " of " + liquidName + " on the wall.");
