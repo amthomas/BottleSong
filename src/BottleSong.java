@@ -11,7 +11,7 @@ class BottleSong {
 		this.liquidNum = liquidNum;
 	}
 	// turned the phrase into a method for less coding
-	void countPhrase() {
+	private void countPhrase() {
 		System.out.println(liquidNum + " " + bottleFormPlural + " of " + liquidName + " on the wall.");
 		System.out.println(liquidNum + " " + bottleFormPlural + " of " + liquidName + ".");
 		System.out.println("Take one down.");
@@ -19,7 +19,7 @@ class BottleSong {
 	}
 	
 	// sing the song in the container's plural form
-	void countBottlesPlural() {
+	private void countBottlesPlural() {
 		while (liquidNum > 1) {
 			countPhrase();
 			liquidNum --;
@@ -32,11 +32,16 @@ class BottleSong {
 	}
 	
 	// sing the song in the container's singular form
-	void countBottlesSingular() {
+	private void countBottlesSingular() {
 		String bottleBackup = bottleFormPlural;
 		bottleFormPlural = bottleFormSing;
 		countPhrase();
 		liquidNum --;
 		System.out.println(liquidNum + " " + bottleBackup + " of " + liquidName + " on the wall.");	
-	}	
+	}
+	
+	public void singSong(){
+		countBottlesPlural();
+		countBottlesSingular();
+	}
 }

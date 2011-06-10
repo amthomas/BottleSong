@@ -56,7 +56,6 @@ public class BottleSongTestDrive {
 		
 		// counts bottles with this method in the
 		// BottleSong class
-		tom.countBottlesPlural();
-		tom.countBottlesSingular();
+		tom.singSong();
 	}
 }
