@@ -2,7 +2,6 @@ class BottleSong {
 	private String liquidName;
 	private String bottleFormPlural;
 	private String bottleFormSing;
-	String bottleBackup;
 	private int liquidNum;
 
 	public BottleSong (String liquidName, String bottleFormPlural, String bottleFormSing, int liquidNum){
@@ -34,7 +33,7 @@ class BottleSong {
 	
 	// sing the song in the container's singular form
 	void countBottlesSingular() {
-		bottleBackup = bottleFormPlural;
+		String bottleBackup = bottleFormPlural;
 		bottleFormPlural = bottleFormSing;
 		countPhrase();
 		liquidNum --;
