@@ -7,18 +7,21 @@ public class BottleSongTestDrive {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		BottleSong tom = new BottleSong();
+		
 
 		// asks and stores the name and number of whatever
 		// the user is drinking
 		System.out.print("What type of liquid will you be drinking (plural form)? ");
-		tom.liquidName = in.nextLine();
-		System.out.print("What type of container will you be drinking " + tom.liquidName + " from (plural form)? ");
-		tom.bottleFormPlural = in.nextLine();
-		System.out.print("What is the singular form of " + tom.bottleFormPlural + "? ");
-		tom.bottleFormSing = in.nextLine();
-		System.out.print("How many " + tom.bottleFormPlural + " of " + tom.liquidName + " " + "will you be drinking? ");
-		tom.liquidNum = in.nextInt();
+		String liquidName = in.nextLine();
+		System.out.print("What type of container will you be drinking " + liquidName + " from (plural form)? ");
+		String bottleFormPlural = in.nextLine();
+		System.out.print("What is the singular form of " + bottleFormPlural + "? ");
+		String bottleFormSing = in.nextLine();
+		System.out.print("How many " + bottleFormPlural + " of " + liquidName + " " + "will you be drinking? ");
+		int liquidNum = in.nextInt();
+		
+		
+		BottleSong tom = new BottleSong(liquidName, bottleFormPlural, bottleFormSing, liquidNum);
 		System.out.println("I'm going to sing you a song about your life now.");
 		System.out.print("Are you ready (yes or no)? ");
 		in.nextLine();
