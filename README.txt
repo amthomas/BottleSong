@@ -1,0 +1,1 @@
+This is a more advanced version of the BeerSong program. It exercises my knowledge of methods and different classes and represents a good portion of what I know so far. I'll make sure to concentrate on inheritance next time for sure.
